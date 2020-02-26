@@ -18,5 +18,11 @@ class ApplicationController < ActionController::Base
       
       # user.followers によって、「自分をフォローしている User 達」を取得
       @count_followers = user.followers.count
-    end  
+    
+      # user.fav_micropostsで自分がお気に入りしているマイクロポストたちを取得
+      @count_fav_microposts = user.fav_microposts.count
+      
+      # user.usersでマイクロポストからみてお気に入り登録しているユーザ達を取得
+      # @count_users = user.users.count
+    end
 end
